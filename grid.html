@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 1500px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+  </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-3 sidenav">
+                <h4>Gift Blog</h4>
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a href="http://angsila.cs.buu.ac.th/~58160189/887371/lab03/lab03.html">Home</a></li>
+                    <li><a href="http://angsila.cs.buu.ac.th/~58160189/887371/lab03/grid.html">Grid on Bootstrap</a></li>
+                    <li><a href="http://angsila.cs.buu.ac.th/~58160189/887371/lab03/form.html">Form</a></li>
+                </ul><br>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search Blog..">
+                    <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                    </span>
+                </div>
+            </div>
+
+            <div class="col-sm-9">
+                <h4><small>RECENT POSTS</small></h4>
+                <hr>
+                <h2>Bootstrap</h2>
+                <h5><span class="glyphicon glyphicon-time"></span> Post by Manita Kansarika, Feb 3, 2017.</h5>
+                <p>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>ขนาดเล็กพิเศษ(โทรศัพท์:xs)<br>(
+                                    <768px)</th>
+                                        <th>ขนาดเล็ก(แทปเบล็ต:sm)<br>(>=768px)</th>
+                                        <th>ขนาดกลาง(เดสทอป:md)<br>(>=992px)</th>
+                                        <th>ขนาดใหญ่(เดสทอป:lg)<br>(>=1200px)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ลักษณะของ Grid</td>
+                                <td>แสดงในแนวนอนทุกครั้ง</td>
+                                <td colspan="3">ย่อและแสดงผลตามขนาดที่กำหนด</td>
+                            </tr>
+                            <tr>
+                                <td>ความกว้างของ<br>Container</td>
+                                <td>ไม่มี(อัตโนมัติ)</td>
+                                <td>750px</td>
+                                <td>970px</td>
+                                <td>1170px</td>
+                            </tr>
+                            <tr>
+                                <td>คำนำหน้า</td>
+                                <td>.col-xs-</td>
+                                <td>.col-sm-</td>
+                                <td>.col-md-</td>
+                                <td>.col-lg-</td>
+                            </tr>
+                            <tr>
+                                <td>จำนวนคอลัมน์</td>
+                                <td colspan="4">12</td>
+                            </tr>
+                            <tr>
+                                <td>ความกว้างของ<br>Column</td>
+                                <td>อัตโนมัติ</td>
+                                <td>~62px</td>
+                                <td>~81px</td>
+                                <td>~97px</td>
+                            </tr>
+                            <tr>
+                                <td>Gutter.width</td>
+                                <td colspan="4">30px (15px on each side of a column)</td>
+                            </tr>
+                            <tr>
+                                <td>Nestable</td>
+                                <td colspan="4">Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Offsets</td>
+                                <td colspan="4">Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Column ordering</td>
+                                <td colspan="4">Yes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </p>
+                <br>
+                <p>
+                    <h3>ตัวอย่าง: การกำหนด Grid</h3>
+                </p>
+                <p>ตัวอย่างนี้ใช้ .col-md-* ซึ่งเป็นการแสดงผลในหน้าจอแบบเดสทอป โดยสามารถเปลี่ยนเป็นต่างๆ ได้ตามต้องการตามตารางด้านบน
+                    ซึ่งจะอยู่ภายใต้ .row</p>
+                <p>
+                    <pre>
+                    <code class="html">
+&lt;div class="row"&gt;
+  &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+  &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+  &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+  &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+  &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+  &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+  &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+  &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+  &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+  &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+  &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+  &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-md-8"&gt;.col-md-8&lt;/div&gt;
+  &lt;div class="col-md-4"&gt;.col-md-4&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-md-4"&gt;.col-md-4&lt;/div&gt;
+  &lt;div class="col-md-4"&gt;.col-md-4&lt;/div&gt;
+  &lt;div class="col-md-4"&gt;.col-md-4&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-md-6"&gt;.col-md-6&lt;/div&gt;
+  &lt;div class="col-md-6"&gt;.col-md-6&lt;/div&gt;
+&lt;/div&gt;</code></pre></p>
+                <br>
+
+                <hr>
+
+                <h4>Leave a Comment:</h4>
+                <form role="form">
+                    <div class="form-group">
+                        <textarea class="form-control" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </form>
+                <br><br>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
